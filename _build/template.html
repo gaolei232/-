@@ -719,6 +719,9 @@ body{background:var(--bg)}
 /* ============================ 基础 ============================ */
 const PAPERS = JSON.parse(document.getElementById('bank').textContent);
 const DRILLS = JSON.parse(document.getElementById('drill').textContent || '[]');
+// 专项题库里 1387 道自测题没有 a 字段（套卷题库是同形空串），统一补成空串，
+// 否则 isMulti 等直接读 q.a 的地方会抛 TypeError
+DRILLS.forEach(p => (p.questions || []).forEach(q => { if (q.a == null) q.a = ''; }));
 const K = {
   prog: 'yp_exam_prog_v1',
   wrong: 'yp_exam_wrong_v1',
@@ -1546,7 +1549,7 @@ function startTimer(){
 }
 
 /* ============================ 题目渲染 ============================ */
-const isMulti = q => q.a.length > 1;
+const isMulti = q => !!(q && q.a && q.a.length > 1);
 const isRight = (chosen, a) => !!chosen && norm(chosen) === norm(a);
 // 无答案题：原卷（题本版）只给了题、没给答案，只能自测，不参与判分
 const isNa = q => !!(q && q.na === 1);
