@@ -1,0 +1,100 @@
+/* ===================== 速算训练（v2.1） ===================== */
+.suan-fab{position:fixed;right:16px;bottom:calc(78px + env(safe-area-inset-bottom));z-index:36;
+  display:flex;align-items:center;gap:6px;height:44px;padding:0 16px;border-radius:999px;
+  background:#DBEAFE;color:#2563EB;font-size:14px;font-weight:800;
+  box-shadow:0 6px 16px rgba(37,99,235,.18);transition:width .22s ease,padding .22s ease,background .2s,transform .18s}
+@media (min-width:760px){ .suan-fab{right:calc(50% - 410px + 16px)} }
+.suan-fab .sf-ico{font-size:17px;line-height:1}
+.suan-fab.mini{width:44px;height:44px;padding:0;justify-content:center}
+.suan-fab.mini .sf-txt{display:none}
+.suan-fab:active{transform:scale(.95)}
+/* 首页状态卡 */
+.suan-hero{background:linear-gradient(135deg,#eaf2ff,#f7faff);border-radius:20px;padding:16px;
+  border:1px solid #DBEAFE;box-shadow:0 8px 22px rgba(37,99,235,.08)}
+@media (prefers-color-scheme:dark){ .suan-hero{background:linear-gradient(135deg,#141d30,#101724);border-color:#22304a} }
+.sh-top{display:flex;align-items:center;gap:10px}
+.sh-ico{width:40px;height:40px;border-radius:13px;background:#DBEAFE;color:#2563EB;display:grid;place-items:center;font-size:19px}
+.sh-top b{display:block;font-size:17px;font-weight:800;font-family:"Varela Round","PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+.sh-top span{font-size:11.5px;color:var(--ink2)}
+.sh-stats{display:flex;gap:24px;margin-top:14px}
+.sh-stats b{display:block;font-size:20px;font-weight:900;font-family:"Nunito Sans","Arial Black","PingFang SC",system-ui;color:#1d4ed8;font-variant-numeric:tabular-nums}
+.sh-stats span{font-size:11px;color:var(--ink2)}
+.suan-cta{width:100%;height:46px;border-radius:14px;background:#2563EB;color:#fff;font-size:15px;font-weight:750;margin-top:14px;box-shadow:0 8px 18px rgba(37,99,235,.25)}
+.suan-cat{background:var(--card);border-radius:20px;border:1px solid #DBEAFE;padding:14px;margin-top:14px;box-shadow:0 6px 18px rgba(37,99,235,.06)}
+@media (prefers-color-scheme:dark){ .suan-cat{border-color:#22304a} }
+.sc-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}
+.sc-head b{font-size:15.5px;font-weight:800}
+.sc-head span{font-size:11px;color:var(--ink2)}
+.sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.suan-chip{display:flex;flex-direction:column;gap:3px;align-items:flex-start;background:#F8FAFF;border:1px solid #E5EDFF;
+  border-radius:16px;padding:11px 12px;text-align:left;transition:transform .16s,background .2s}
+.suan-chip:active{transform:scale(.98)}
+@media (prefers-color-scheme:dark){ .suan-chip{background:#141c2c;border-color:#24304a} }
+.sc-name{font-size:13.5px;font-weight:700}
+.sc-meta{font-size:10.5px;color:var(--ink2)}
+/* 配置页 */
+.suan-demo{margin-top:12px;background:#F8FAFF;border:1px dashed #C7DAFE;border-radius:14px;padding:12px}
+@media (prefers-color-scheme:dark){ .suan-demo{background:#141c2c;border-color:#2b3b5c} }
+.suan-demo span{font-size:11px;color:#2563EB;font-weight:700;display:block;margin-bottom:4px}
+.suan-demo b{font-size:15px;line-height:1.6;font-weight:650}
+.chipbtn{height:38px;padding:0 16px;border-radius:12px;background:var(--card);border:1.5px solid #C7DAFE;color:var(--ink2);
+  font-size:13px;font-weight:650;transition:background .15s,color .15s,border-color .15s}
+.chipbtn.on{background:#2563EB;border-color:#2563EB;color:#fff;box-shadow:0 4px 12px rgba(37,99,235,.22)}
+.switch{width:46px;height:26px;border-radius:999px;background:var(--line);position:relative;transition:background .18s}
+.switch.on{background:#2563EB}
+.switch i{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .18s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.switch.on i{left:23px}
+.suan-foot{margin-top:22px}
+/* 答题页 */
+.suan-run{padding-top:10px}
+.suan-progress{display:flex;justify-content:space-between;align-items:baseline;font-size:13px}
+.suan-progress b{font-size:15px;font-weight:800}
+.suan-progress span{font-size:11.5px;color:var(--ink2)}
+.suan-q{font-size:26px;font-weight:800;line-height:1.55;margin:22px 4px 18px;letter-spacing:.5px;font-family:"Nunito Sans","PingFang SC",system-ui,sans-serif}
+.suan-input{width:100%;height:56px;border-radius:16px;border:1.5px solid #C7DAFE;background:var(--card);
+  font-size:22px;font-weight:750;padding:0 16px;outline:0;color:var(--ink);text-align:center;font-variant-numeric:tabular-nums}
+.suan-input:focus{border-color:#2563EB;box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+.suan-hintline{font-size:11px;color:var(--ink2);text-align:center;margin-top:8px}
+.suan-runbar{display:flex;gap:10px;margin-top:26px}
+/* 成绩单 */
+.suan-score{background:var(--card);border-radius:20px;border:1px solid #DBEAFE;padding:20px 16px;text-align:center;box-shadow:0 8px 22px rgba(37,99,235,.07)}
+.ss-big{font-size:60px;line-height:1.05;font-weight:900;color:#1d4ed8;font-family:"Nunito Sans","Arial Black","PingFang SC",system-ui;font-variant-numeric:tabular-nums}
+.ss-big span{font-size:24px;font-weight:800}
+.ss-sub{font-size:12.5px;color:var(--ink2);margin-top:4px}
+.ss-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:16px}
+.ss-grid div b{display:block;font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.ss-grid div span{font-size:10.5px;color:var(--ink2)}
+.suan-review{background:var(--card);border-radius:14px;padding:12px;margin-top:9px;border:1px solid var(--line)}
+.suan-review.bad{background:#FEF2F2;border-color:#FECACA}
+@media (prefers-color-scheme:dark){ .suan-review.bad{background:#2a1616;border-color:#5b2626} }
+.sr-top{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink2)}
+.sr-top b{font-size:12px;color:var(--ink)}
+.sr-stem{font-size:13.5px;font-weight:650;line-height:1.6;margin-top:5px}
+.sr-ans{font-size:11.5px;color:var(--ink2);margin-top:5px}
+.suan-review.bad .sr-ans b:last-child{color:#B91C1C}
+/* 能力条 */
+.suan-bar-row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.sb-name{width:76px;font-size:12.5px;font-weight:650;flex:none}
+.sb-track{flex:1;height:10px;border-radius:99px;background:#EAF1FF;overflow:hidden}
+@media (prefers-color-scheme:dark){ .sb-track{background:#1d2740} }
+.sb-track i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#60a5fa,#2563EB)}
+.sb-val{width:96px;text-align:right;font-size:11px;color:var(--ink2);flex:none}
+/* 舒尔特 */
+.sch-grid{display:grid;gap:8px;margin-top:16px}
+.sch-cell{aspect-ratio:1;border-radius:14px;background:var(--card);border:1px solid #DBEAFE;font-size:20px;font-weight:800;color:var(--ink);box-shadow:var(--shadow);transition:transform .12s,background .2s}
+.sch-cell:active{transform:scale(.94)}
+.sch-cell.done{background:#DBEAFE;color:#2563EB;border-color:#BFDBFE}
+/* 场景卡与文末关联 */
+.suan-basic-card{display:flex;align-items:center;gap:11px;width:100%;text-align:left;margin-top:12px;
+  background:linear-gradient(120deg,#EAF2FF,#F8FBFF);border:1px solid #DBEAFE;border-radius:18px;padding:13px;
+  box-shadow:0 6px 16px rgba(37,99,235,.07)}
+@media (prefers-color-scheme:dark){ .suan-basic-card{background:linear-gradient(120deg,#141d30,#101724);border-color:#22304a} }
+.sbc-ico{width:38px;height:38px;border-radius:12px;background:#DBEAFE;color:#2563EB;display:grid;place-items:center;font-size:18px;flex:none}
+.sbc-main{flex:1;min-width:0}
+.sbc-main b{display:block;font-size:13.5px;font-weight:750;line-height:1.45}
+.sbc-main span{font-size:11px;color:var(--ink2)}
+.sbc-cta{font-size:12px;font-weight:750;color:#2563EB;background:#DBEAFE;border-radius:10px;padding:7px 11px;flex:none}
+.suan-link{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;
+  background:#F0F7FF;border:1px solid #DBEAFE;border-radius:14px;padding:10px 12px;margin:8px 0;font-size:12.5px;color:#1d4ed8}
+.suan-link span{font-weight:750}
+@media (prefers-color-scheme:dark){ .suan-link{background:#131c2c;border-color:#22304a} }
