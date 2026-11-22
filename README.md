@@ -253,6 +253,11 @@ npm test          # → 216/216 passed
 三、套卷模考与冲刺/          # parse.py 的输入
 ```
 
+**另外：仓库中不包含任何 `.pdf` 文件**（`.gitignore` 全量忽略 `*.pdf`），包括
+`_build/study_pdf/` 里 4 份由 `.doc` 转出的 PDF。若要重建阅读板块，请先在本地把
+这 4 份 PDF 准备好（`gg07_neibu` / `gg08_qiye` / `xc03_changshi` / `xc03_yanyu`），
+再执行 `npm run build:study`。刷题功能不依赖任何 PDF。
+
 ---
 
 ## 已知限制
