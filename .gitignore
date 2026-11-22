@@ -1,0 +1,78 @@
+# ============================================================
+# 依赖与工具链（体积巨大、可重新安装，不入库）
+# ============================================================
+node_modules/
+app-mobile/.npm-cache/
+_build/gradle-home/
+_build/jdk21/
+
+# ============================================================
+# 构建产物（由 _build/ 下的脚本生成，可完整重建）
+# ============================================================
+# 单文件网页：build_html.py 由 template.html + 两个题库 JSON 生成
+/延长石油套卷模考.html
+
+# 安卓打包产物
+*.apk
+*.aab
+*.ap_
+*.dex
+app-mobile/android/build/
+app-mobile/android/app/build/
+app-mobile/android/.gradle/
+app-mobile/android/app/src/main/assets/public/
+app-mobile/android/capacitor-cordova-android-plugins/
+
+# 同步副本（sync-html.js / build_study.py 生成）
+app-mobile/www/index.html
+app-mobile/www/study/
+
+# ============================================================
+# 原始资料（外部大数据：单文件最大 185 MB，超出 Git 托管上限）
+# 需要阅读学习板块时，按 README「原始资料目录」一节放回原位
+# ============================================================
+一、学习资料（看·学）/
+二、专项练习（做·练）/
+三、套卷模考与冲刺/
+
+# ============================================================
+# 中间产物与缓存
+# ============================================================
+_build/raw/
+_build/raw_final/
+_build/raw_docx/
+_build/raw_drill/
+_build/bank.json
+_build/cp/
+_build/shots/
+_build/tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ============================================================
+# 环境变量与密钥
+# ============================================================
+.env
+.env.*
+!.env.example
+*.local
+*.keystore
+*.jks
+*.p12
+app-mobile/android/local.properties
+
+# ============================================================
+# 系统与编辑器
+# ============================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.log
+npm-debug.log*

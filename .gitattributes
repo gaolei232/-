@@ -1,0 +1,29 @@
+* text=auto eol=lf
+
+# Windows 脚本保持 CRLF，避免 PowerShell / cmd 解析异常
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.gradle text eol=lf
+gradlew text eol=lf
+
+# 二进制资源，避免被当作文本做 diff
+*.pdf binary
+*.doc binary
+*.docx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.apk binary
+*.jar binary
+
+# 题库 JSON 为单行大文件，diff 无意义且极易撑爆界面
+_build/bank_final.json -diff
+_build/drill_bank.json -diff
+_build/study_manifest.json -diff
+
+# 第三方库，不计入语言统计
+app-mobile/www/pdfjs/** linguist-vendored

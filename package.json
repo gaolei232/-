@@ -1,0 +1,26 @@
+{
+  "name": "ycsy-exam-app",
+  "version": "2.2.0",
+  "description": "延长石油招聘考试备考应用：套卷模考 / 专项练习 / 随机刷题 / 阅读学习 / 速算训练，单文件离线可用，可打包为安卓 App",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build:html": "python _build/build_html.py",
+    "build:study": "python _build/build_study.py",
+    "build": "npm run build:study && npm run build:html",
+    "test": "node _build/test_app.js",
+    "sync": "npm --prefix app-mobile run sync",
+    "apk": "npm --prefix app-mobile run build:android",
+    "mobile:install": "npm --prefix app-mobile install"
+  },
+  "keywords": [
+    "exam",
+    "quiz",
+    "offline",
+    "single-file",
+    "capacitor"
+  ]
+}

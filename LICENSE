@@ -1,0 +1,35 @@
+MIT License
+
+Copyright (c) 2026 gl
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+注意 / Note
+
+本许可证仅覆盖本仓库中的**代码**（页面逻辑、构建脚本、测试）。
+
+下列内容**不在**本许可证范围内，其权利归原始出题/出版方所有，仓库中仅作个人备考使用：
+
+- 题库内容（`_build/bank_final.json`、`_build/drill_bank.json` 中来自试卷的题干、选项、答案与解析）
+- 阅读资料清单指向的原始 PDF / Word 文件
+- 任何第三方商标、机构名称
+
+如需将本题库内容用于公开分发或商业用途，请自行取得授权。
